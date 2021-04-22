@@ -52,6 +52,6 @@ morla = turtle.Turtle()
 #draw_radial_lines(morla, 100, 100, 50, 32)
 
 def draw_radials_in_quadrants(t, length, num_lines):
-    
+    lessgoooo
 
 
