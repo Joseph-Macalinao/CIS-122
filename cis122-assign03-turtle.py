@@ -44,7 +44,7 @@ def draw_radial_lines(t, x, y, length, num_lines):
         t.setheading(0)
     turtle.done()
 
-morla = turtle.Turtle()
+
 
 #draw_radial_lines(morla, -100, -100, 25, 8)
 #draw_radial_lines(morla, -100, 100, 100, 4)
@@ -52,6 +52,16 @@ morla = turtle.Turtle()
 #draw_radial_lines(morla, 100, 100, 50, 32)
 
 def draw_radials_in_quadrants(t, length, num_lines):
-    lessgoooo
+    draw_line(t, 0, 0, 0, length * 2)
+    draw_line(t, 0, 0, 90, length * 2)
+    draw_line(t, 0, 0, 180, length * 2)
+    draw_line(t, 0, 0, 270, length * 2)
+    turtle.done()
+    #for i in range(4):
+        #for i in range(num_lines):
+           # draw_line(t,0, 0, 0, num_lines  )
+morla = turtle.Turtle()
+
+draw_radials_in_quadrants(morla, 100, 3)
 
 
