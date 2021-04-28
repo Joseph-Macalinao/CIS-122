@@ -1,4 +1,3 @@
-import calendar
 
 def get_full_month(n):
     '''
@@ -48,6 +47,13 @@ test_get_full_month()
 def is_leap_year(n):
     '''
     Given an int, return whether that value is a leap year
+
+    This function uses the algorithm of finding if a year is a leap year to determine \
+    if a year is a leap year
+
+    n(int) - year that you are testing
+
+    return(boolean)
     '''
     if n % 4 != 0:
         return False
@@ -62,18 +68,28 @@ def test_is_leap_year(start_year, end_year):
     for year in range(start_year, end_year + 1):
         is_leap = is_leap_year(year)
         if is_leap:
-            result = result + str(year) + ', '
+            if year == end_year + 1:
+                print(end_year)
+            else:
+                result = result + str(year) + ', '
     print(result)
 
 test_is_leap_year(1996, 2112)
 
 def validate_leap_year(start_year, end_year):
     '''
+    this function will validate if the year is a leap year
 
+    this function will see, using the test_is_leap_year function to see if the day really is a function
+
+    start_year(int) - year that it is starting with
+    end_year(int) - year that it will end with
+
+    return - void
     '''
+    result = ''
     for year in range(start_year, end_year + 1):
         is_leap = is_leap_year(year)
         if is_leap:
             result = result + str(year) + ', '
     print(result)
-#haha lmao

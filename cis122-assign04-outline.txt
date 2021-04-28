@@ -1,0 +1,1 @@
+To find the year and the day, I will first check if they year input will be
