@@ -1,1 +1,5 @@
-To find the year and the day, I will first check if they year input will be
+To find the year and the day, I will first check if they year is a leap year because if it is,
+the calculations will be different than if it is not a leap year. Then, if it is not a leap year, I will us
+a function that will subtract each month's amount of days depending on the number given
+    ie - if days == 36, I will subtract 31 to take away the days of January
+If it is a leap year, I will call the same function but add 1 if the day is above 59(Jan + Normal Feb).
