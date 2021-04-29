@@ -9,7 +9,15 @@ def date_calculator_non_leap():
     '''
     This function will calculate what day of the year it is.
 
+    This function will take an input and by using/
+    12 if statements and then checking the index/
+    of that input in the month's given range
 
+    arguments - none
+
+    return
+    month(str) - the month of the day input
+    day(int) - day of the month that was calculated
     '''
     day = int(input("What day of they year will you be calculating from 1-365?"))
     if 0 < day <= 31:
@@ -66,12 +74,11 @@ def date_calculator_non_leap():
 
 print("The date is" + str(date_calculator_non_leap()))
 
-
-#def print_date(day, year):
-    #if the year is a leap year
-    #if year % 4 != 0 and year % 100 != 0 or year % 400 != 0:
-
-
-    #if the year is a normal year
-    #else:
-        #
+'''
+def print_date(day, year):
+    if the year is a leap year
+    if year % 4 != 0 and year % 100 != 0 or year % 400 != 0:
+    
+    if the year is a normal year
+    else:
+'''
