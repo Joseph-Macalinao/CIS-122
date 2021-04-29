@@ -12,45 +12,57 @@ def date_calculator_non_leap(day):
     i = 365
     if 0 < day <= 31:
         month = 'January'
-        return month
+        day = range(0, 32).index(day)
+        return month, day
     elif 31 < day <= 59:
         month = 'February'
-        return month
+        day = range(32, 60).index(day) + 1
+        return month, day
     elif 59 < day <= 90:
         month = 'March'
-        return month
+        day =  range(60, 91).index(day) + 1
+        return month, day
     elif 90 < day <= 120:
         month = 'April'
-        return month
+        day = range(91, 121).index(day) + 1
+        return month, day
     elif 120 < day <= 151:
         month  = 'May'
-        return month
+        day = range(121, 152).index(day) + 1
+        return month, day
     elif 151 < day <= 181:
         month = 'June'
+        day = range(151, 182).index(day) + 1
         return month
     elif 181 < day <= 212:
         month = 'July'
-        return month
+        day = range(182, 213).index(day) + 1
+        return month, day
     elif 212 < day <= 243:
         month = 'August'
-        return month
+        day = range(213, 244).index(day) + 1
+        return month, day
     elif 243 < day <= 273:
         month = 'September'
-        return month
+        day = range(244, 274).index(day) + 1
+        return month, day
     elif 273 < day <= 304:
         month = 'October'
-        return month
+        day = range(274, 305).index(day) + 1
+        return month, day
     elif 304 < day <= 334:
         month = 'November'
-        return month
+        day = range(305, 335).index(day) + 1
+        return month, day
     elif 334 < day <= 365:
         month = 'December'
-        return month
+        day = range(335, 367).index(day) + 1
+        return month, day
     else:
-        print("Invalid Date - Give a day that is 1-365")
+        print("Invalid Date: Give a day that is 1-365")
 
 
-print(date_calculator_non_leap(135))
+print("The date is" + str(date_calculator_non_leap(204)))
 
 
 #def print_date(day, year):
