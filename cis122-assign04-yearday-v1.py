@@ -5,11 +5,13 @@ Credit: Me and Kaya Jang
 Description: Accept a user year and day and convert it to a month, day, and year
 '''
 
-def date_calculator_non_leap(day):
+def date_calculator_non_leap():
     '''
+    This function will calculate what day of the year it is.
+
 
     '''
-    i = 365
+    day = int(input("What day of they year will you be calculating from 1-365?"))
     if 0 < day <= 31:
         month = 'January'
         day = range(0, 32).index(day)
@@ -62,7 +64,7 @@ def date_calculator_non_leap(day):
         print("Invalid Date: Give a day that is 1-365")
 
 
-print("The date is" + str(date_calculator_non_leap(204)))
+print("The date is" + str(date_calculator_non_leap()))
 
 
 #def print_date(day, year):
