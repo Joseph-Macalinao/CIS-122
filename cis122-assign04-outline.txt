@@ -3,3 +3,5 @@ the calculations will be different than if it is not a leap year. Then, if it is
 a function that will subtract each month's amount of days depending on the number given
     ie - if days == 36, I will subtract 31 to take away the days of January
 If it is a leap year, I will call the same function but add 1 if the day is above 59(Jan + Normal Feb).
+Then I will call create a similar function for leap year days by just adding 1 to the ranges of the months in the
+regular year.
