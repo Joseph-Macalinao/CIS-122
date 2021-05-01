@@ -41,25 +41,25 @@ def get_days_in_year(year):
 
 def input_day_of_year(year):
 
-    day = int(input("Enter day greater than 0"))
+    day = int(input("Enter day greater than 0: "))
     if is_leap_year(year) == True:
         while day > get_days_in_year(year) or day <= 0:
             while day > get_days_in_year(year):
                 print("The day of the year that is input has to be less than or equal to 366")
-                day = int(input("Enter a day greater than 0"))
+                day = int(input("Enter a day greater than 0: "))
             while day <= 0:
                 print("The day of the year that is input has to be greater than 0")
-                day = int(input("Enter a day greater than 0"))
+                day = int(input("Enter a day greater than 0: "))
         if valid_year and valid_day_of_year(year, day) and day <= get_days_in_year(year):
             return day
     elif is_leap_year(year) == False:
         while day > get_days_in_year(year) or day <= 0:
             while day > get_days_in_year(year):
                 print("The day of the year that is input has to be less than or equal to 365")
-                day = int(input("Enter a day greater than 0"))
+                day = int(input("Enter a day greater than 0: "))
             while day <= 0:
                 print("The day of the year that is input has to be greater than 0")
-                day = int(input("Enter a day greater than 0"))
+                day = int(input("Enter a day greater than 0: "))
         if valid_year(year) and valid_day_of_year(year, day) and day <= get_days_in_year(year):
             return day
         else:
@@ -219,3 +219,5 @@ def start():
     month = get_date_string
     year = input_year()
     get_date_string(year, month, input_day_of_year(year))
+
+start()
