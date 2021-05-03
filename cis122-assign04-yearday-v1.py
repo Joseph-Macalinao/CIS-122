@@ -189,6 +189,10 @@ def print_date():
 
 
 def start():
+    '''
+    Initializes program to start(I read ahead and thought I came up with this idea and
+    when I realized what happened, it was too late)
+    '''
     print_date()
 
 start()
