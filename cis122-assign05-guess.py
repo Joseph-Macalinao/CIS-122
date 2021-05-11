@@ -60,9 +60,20 @@ def guess():
     print(f'Word: \t{word}')
     print(f'Guessed: \t{guess_bank}')
     print(f'Matched: \t{matched_guess_bank}')
-    print(f'Guesses: {count}')
+    print(f'Guesses: \t{count}')
 
 def search(string, letter):
+    '''
+    will look for a letter
+
+    will take a sting and a letter and will search to see if the letter appears in the string
+
+    arg
+    string(str) - string that will be checked
+    letter(str) - letter that will be looked for
+
+    return- Boolean
+    '''
     for char in string:
         if char == letter:
             return True
