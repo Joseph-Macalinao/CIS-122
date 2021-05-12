@@ -1,3 +1,6 @@
+from cis122_assign06_shared import pad_left, pad_right
+
+
 def file():
     na = open('random_numbers.txt')
     total_hash = 0
