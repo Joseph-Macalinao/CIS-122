@@ -1,8 +1,8 @@
 def pig_latin(string):
-    vowel = ['a', 'e', 'i', 'o', 'u']
+    vowel = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
     if string[0] not in vowel:
         if string[1] not in vowel:
-            return string[2:] + (string[0] + string[1]) + 'ay'
+            return string[2:] + string[0] + string[1] + 'ay'
         elif string[1] in vowel:
             return string[1:] + string[0] + 'ay'
     elif string[0] in vowel:
@@ -15,4 +15,4 @@ def pig_sentence(sent):
     return sentence
 
 
-print(pig_sentence('shamrock farms'))
+print(pig_sentence('I love University of Oregon'))
