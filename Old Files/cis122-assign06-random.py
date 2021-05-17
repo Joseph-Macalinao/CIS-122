@@ -1,13 +1,35 @@
+'''
+Author: Joseph Macalinao
+Credit: Lab
+Description - making a set attribute calculator
+Cis Assign 6 Sprint 2021
+'''
+
+
 from cis122_assign06_shared import pad_left, pad_right
 
 import os
 
 
 def file():
+    '''
+    this function will give the stats about a file
+
+    this function, after validating the existence of a file, will print the count, average, amount of numbers
+    and amount of comments. this function also uses the os module to verify that the file called exists
+
+    arg - none
+
+    return - none
+    '''
     fil = input("Enter filename (blank to exit): ")
+    if fil == '':
+        return 0
     while os.path.exists(fil) == False:
         print("Invalid filename")
         fil = input("Enter filename (blank to exit): ")
+        if fil == '':
+            return 0
 
     na = open('random_numbers.txt')
     total_hash = 0
