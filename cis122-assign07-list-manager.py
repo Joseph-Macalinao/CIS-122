@@ -15,17 +15,18 @@ def intitial_input():
     deci = deci.strip()
     deci = deci.lower()
     if len(deci) == 0:
+        print("Goodbye")
         return 0
     if deci == '?':
         cmd_help()
-        '''
-        print('*** Available Commands ***')
-        for i in range(len(cmd)):
-        print(pad_right((cmd[i]), 10 - (len(cmd[i]))) + description[i])
-        print('Empty to exit')
-        '''
-    if deci == 'add':
+    elif deci == 'add':
         cmd_add(list)
+    elif deci == 'list':
+        cmd_list(list)
+    elif deci == 'clear':
+        cmd_clear(list)
+    elif deci == 'delete':
+        cmd_delete(list)
 
 
 
@@ -36,16 +37,44 @@ def cmd_help():
     print('Empty to exit')
     intitial_input()
 def cmd_add(t):
-    pass
-
+    ad = False
+    while ad == False:
+        elem = input('Enter information (empty to stop): ')
+        if len(elem) == 0:
+            ad = True
+        else:
+            list.append(elem)
+            print(f'Added, item count {len(list)}')
+    intitial_input()
 def cmd_delete(t):
-    pass
-
+    n = 0
+    dele_dec = False
+    for i in range(len(list)):
+        print(pad_right(str(n),3) + list[i])
+        n += 1
+    while dele_dec == False:
+        if len(list) == 0:
+            print('There are no more elements to delete.')
+            intitial_input()
+        dele = input("Enter number to delete (empty to stop): ")
+        dele = dele.strip()
+        if dele.isdigit():
+            dele = int(dele)
+            del list[dele]
+        if dele == '':
+            dele_dec = True
+        intitial_input()
 def cmd_list(t):
-    pass
+    print(f'The total amount of items in your list is {len(list)}')
+    for i in list:
+        print(i)
+    intitial_input()
 
 def cmd_clear(t):
-    pass
+    leng = len(list)
+    list.clear()
+    print(f'{leng} items removed')
+    intitial_input()
 
 def get_max_list_item_size(t):
     pass
