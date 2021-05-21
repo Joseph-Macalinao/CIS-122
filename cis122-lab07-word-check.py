@@ -1,3 +1,10 @@
+'''
+Joseph Macalinao
+CIS122- Spring 2021
+Credit: Lab
+Description: Check to see if a word is in a file
+'''
+
 # Loop until nothing entered
 while True:
     # Prompt for input

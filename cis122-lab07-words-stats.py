@@ -1,5 +1,23 @@
-
+'''
+Joseph Macaliao
+CIS 122 - Spring 2021
+Credit: Lab
+Description: Get the stats from a file
+'''
 def num_letters(fil, letter):
+    '''
+    this function will open a file and get it ready for its stats to be taken
+
+    this function will take a list argument and take open it. it will then strip all of its lines
+    and make them lower to be able to get the stats of each individual line
+
+    arg -
+    fil(file) - file that will be opened
+    letter(str) - checking first char of each line
+
+    return -
+    count(int) - how many lines there are in a file
+    '''
     count = 0
     for line in fil:
         line = line.strip()
