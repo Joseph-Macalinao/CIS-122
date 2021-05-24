@@ -29,7 +29,7 @@ def num_letters(fil, letter):
 
 
 #open file
-fin = open('words_alpha.txt')
+fin = open('../words_alpha.txt')
 
 
 

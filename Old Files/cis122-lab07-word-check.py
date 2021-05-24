@@ -19,7 +19,7 @@ while True:
         # Perform search
 
         # Open file
-        fin = open("words_alpha.txt")
+        fin = open("../words_alpha.txt")
 
         # Search for word by looping over file
         found = False
