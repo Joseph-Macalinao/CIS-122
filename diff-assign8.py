@@ -58,22 +58,40 @@ def create_group(group):
     initial_input()
 
 
-def list_groups(group):
-    field = ''
-    for i in group.values():
-        field += i
-    field = field.split(' ')
-    field = list(field)
-    field.remove('')
+def list_groups(group, cont = True):
     print("** List of Groups **\n")
     for i in group:
-        print(f'{i}: {len(field)} properties ({field})')
-    initial_input()
+        print(f'{i}: {len((group[i].split()))} properties ({group[i].split()})')
+    if cont is True:
+        initial_input()
+    elif cont is False:
+        pass
 
-def add_group_data(d):
-    print('h')
 
-def list_group_data(d):
+def add_group_data(group):
+    val = ''
+    ele = ''
+    valid = True
+    list_groups(group, False)
+    while valid == True:
+        group_data = input("Which group would you like to add data to: ")
+        if len(group_data) == 0:
+            initial_input()
+        elif group_data not in group:
+            print("Value not in group.")
+            continue
+        else:
+            for i in group.copy():
+                if i  == group_data:
+                    for ele in group[i].split():
+                        val = ''
+                        add_data = input(f'Enter data for {group[i]}')
+                        val += add_data
+                        group[ele] = val
+        print(group)
+
+
+def list_group_data(group):
     print('hio')
 
 
