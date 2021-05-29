@@ -74,7 +74,7 @@ def add_group_data(group):
     valid = True
     list_groups(group, False)
     while valid == True:
-        group_data = input("Which group would you like to add data to: ")
+        group_data = input("Which group would you like to add data to (empty to cancel): ")
         if len(group_data) == 0:
             initial_input()
         elif group_data not in group:
@@ -85,14 +85,18 @@ def add_group_data(group):
                 if i  == group_data:
                     for ele in group[i].split():
                         val = ''
-                        add_data = input(f'Enter data for {group[i]}')
+                        add_data = input(f'Enter data for {ele}')
                         val += add_data
                         group[ele] = val
         print(group)
 
 
 def list_group_data(group):
-    print('hio')
+    list_groups(group, False)
+    for i in group:
+        if i in group.keys():
+            print(f'{group[i]}')
+
 
 
 initial_input()
